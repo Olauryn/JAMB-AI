@@ -1,0 +1,18 @@
+{
+  "english": [
+    {
+      "question": "Choose the correct option: He _____ to school every day.",
+      "options": ["go", "goes", "gone", "going"],
+      "answer": "b",
+      "explanation": "The correct form for third-person singular present is 'goes'."
+    }
+  ],
+  "mathematics": [
+    {
+      "question": "Solve: 2x + 3 = 11",
+      "options": ["4", "5", "6", "3"],
+      "answer": "a",
+      "explanation": "2x = 8 so x = 4."
+    }
+  ]
+}
