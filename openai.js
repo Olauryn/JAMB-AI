@@ -1,14 +1,14 @@
-const { Configuration, OpenAIApi } = require('openai');
+const OpenAI = require("openai");
 
-const configuration = new Configuration({
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 module.exports.askAI = async (message) => {
-  const response = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: message }],
+  const chatCompletion = await openai.chat.completions.create({
+    model: "gpt-3.5-turbo",
+    messages: [{ role: "user", content: message }],
   });
-  return response.data.choices[0].message.content;
+
+  return chatCompletion.choices[0].message.content;
 };
